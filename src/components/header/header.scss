@@ -14,7 +14,7 @@
 		gap: 15px;
 		text-decoration: none;
 		filter: drop-shadow(0px 0px 5px #555);
-		transition: filter, transform, 0.3s ease-in;
+		transition: filter 0.3s ease-in, transform 0.3s ease-in;
 
 		&__icon {
 			width: 70px;
@@ -50,8 +50,8 @@
 				display: flex;
 				align-items: center;
 				gap: 5px;
-				border: 1px solid black;
-				transition: transform, filter, 0.2s ease-in-out;
+				// border: 1px solid black;
+				transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 
 				&-title {
 					font-size: 30px;
@@ -74,7 +74,16 @@
 
 				&:hover {
 					transform: translate(0, -2px);
+					filter: drop-shadow(2px 2px 2px black);
+				}
+
+				&.visible {
+					transform: translate(0, -2px);
 					filter: drop-shadow(2px 2px 3px black);
+				}
+
+				&.visible div{
+					rotate: 90deg;
 				}
 			}
 
@@ -86,17 +95,36 @@
 				gap: 15px;
 				padding: 15px;
 				background: #ddd;
-				border-radius: 15px;
+				border: 1px solid #ccc;
+				left: -50px;
+				border-radius: 10px;
+				opacity: 0;
+				transform: translateY(-10px);
+				visibility: hidden;
+				z-index: 1;
+				transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+				&.visible {
+					opacity: 1;
+					transform: translateY(0);
+					visibility: visible;
+				}
 			}
 
 			&__link {
 				font-size: 25px;
+				box-sizing: content-box;
+				padding: 10px;
 				color: black;
 				text-decoration: none;
 				transition: filter 0.1s ease-in-out;
 
 				&:hover {
 					filter: drop-shadow(0px 0px 3px black);
+				}
+
+				&:active {
+					color: silver;
 				}
 			}
 		}
@@ -105,11 +133,33 @@
 			font-size: 30px;
 			color: black;
 			text-decoration: none;
-			transition: transform, filter, 0.2s ease-in-out;
+			transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 
 			&:hover {
 				transform: translate(0, -2px);
 				filter: drop-shadow(2px 2px 3px black);
+			}
+
+			&:active {
+				color: silver;
+			}
+		}
+	}
+
+	&__course {
+		font-size: 25px;
+		text-align: center;
+
+		a {
+			color: black;
+			font-size: 25px;
+
+			&:hover {
+				color: #777;
+			}
+
+			&:active {
+				color: #aaa;
 			}
 		}
 	}

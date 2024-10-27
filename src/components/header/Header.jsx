@@ -1,15 +1,25 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./header.scss"
-
+import "./header.scss";
 
 class Header extends React.Component {
 	constructor(props) {
-		super(props)
+		super(props);
+		this.state = {
+			isMenuVisible: false,
+		};
 	}
 
+	handleMouseEnter = () => {
+		this.setState({ isMenuVisible: true });
+	};
+
+	handleMouseLeave = () => {
+		this.setState({ isMenuVisible: false });
+	};
+
 	render() {
-		return(
+		return (
 			<header className="header">
 				<NavLink to={"/main"} className="logo header__logo">
 					<div className="logo__icon"></div>
@@ -17,19 +27,20 @@ class Header extends React.Component {
 				</NavLink>
 
 				<div className="navbar header__navbar">
-					<div className="themes-menu navbar__themes-menu">
-						<div className="themes-menu__btn">
+					<div 
+						className="themes-menu navbar__themes-menu"
+						onMouseEnter={this.handleMouseEnter}
+						onMouseLeave={this.handleMouseLeave}
+					>
+						<div className={`themes-menu__btn ${this.state.isMenuVisible ? 'visible' : ''}`}>
 							<span className="themes-menu__btn-title">Темы</span>
 							<div className="themes-menu__btn-icon"></div>
 						</div>
 
-						<div className="themes-menu__list">
+						<div className={`themes-menu__list ${this.state.isMenuVisible ? 'visible' : ''}`}>
 							<NavLink to="/oop-basics" className="themes-menu__link">Основы ООП</NavLink>
-
 							<NavLink to="/inheritance" className="themes-menu__link">Наследование</NavLink>
-
 							<NavLink to="/encapsulating" className="themes-menu__link">Инкапсуляция</NavLink>
-
 							<NavLink to="/polymorphysm" className="themes-menu__link">Полиморфизм</NavLink>
 						</div>
 					</div>
@@ -44,7 +55,7 @@ class Header extends React.Component {
 					<a href="tel:+78005553535">8 800 555 35 35</a>
 				</div>
 			</header>
-		)
+		);
 	}
 }
 
