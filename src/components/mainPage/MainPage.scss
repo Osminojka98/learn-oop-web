@@ -32,8 +32,8 @@
 	}
 
 	&__img {
-		width: 500px;
-		height: 500px;
+		width: 50%;
+		height: 400px;
 		background: url(./../../pics/oop-man.png);
 		background-position:  center center;
 		background-repeat: no-repeat;
@@ -42,3 +42,30 @@
 	}
 }
 
+
+
+@media screen and (max-width:900px) {
+	.welcome {
+		flex-direction: column;
+
+		&__prgh {
+			width: 100%;
+		}
+
+		&__img {
+			width: 100%;
+		}
+	}
+
+	.site-about {
+		flex-direction: column-reverse;
+
+		&__prgh {
+			width: 100%;
+		}
+
+		&__img {
+			width: 100%;
+		}
+	}
+}

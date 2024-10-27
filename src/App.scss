@@ -21,3 +21,22 @@ body {
 	padding: 50px;
 	margin: 0px 10%;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 96%;
+		margin: 0px 2%;
+		padding: 20px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.container {
+		width: 100%;
+		margin: 0;
+		padding: 15px;
+	}
+}

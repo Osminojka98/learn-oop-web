@@ -24,3 +24,36 @@
 		font-size: 25px;
 	}
 }
+
+
+@media screen and (max-width: 500px) {
+	.title {
+		font-size: 30px;
+		margin: 5px;
+	}
+
+	.subtitle {
+		font-size: 27px;
+		margin: 5px;
+	}
+
+	.prgh {
+		ul, ol {
+			margin-left: 15px;
+			padding: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.prgh {
+		font-size: 20px;
+
+		ul li {
+			font-size: 20px;
+		}
+		ol li {
+			font-size: 20px;
+		}
+	}
+}

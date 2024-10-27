@@ -7,8 +7,23 @@ class Header extends React.Component {
 		super(props);
 		this.state = {
 			isMenuVisible: false,
-		};
-	}
+      isLargeScreen: window.innerWidth >= 1200,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({ isLargeScreen: window.innerWidth >= 1000 });
+  };
+
+
 
 	handleMouseEnter = () => {
 		this.setState({ isMenuVisible: true });
@@ -42,17 +57,22 @@ class Header extends React.Component {
 							<NavLink to="/inheritance" className="themes-menu__link">Наследование</NavLink>
 							<NavLink to="/encapsulating" className="themes-menu__link">Инкапсуляция</NavLink>
 							<NavLink to="/polymorphysm" className="themes-menu__link">Полиморфизм</NavLink>
+
+							{(!this.state.isLargeScreen) ? 
+								<NavLink to="/testing" className="themes-menu__link">Тестирование</NavLink> : ""} 
+
+							{!this.state.isLargeScreen ? 
+								<NavLink to="/about" className="themes-menu__link">О сайте</NavLink> : ""}
 						</div>
 					</div>
 
-					<NavLink to="/about" className="navbar__link">О сайте</NavLink>
-					<NavLink to="/testing" className="navbar__link">Тестирование</NavLink>
-				</div>
+					{this.state.isLargeScreen ? 
+					<NavLink to="/about" className="navbar__link">О сайте</NavLink> : ""}
 
-				<div className="header__course">
-					Записаться на курс по JS
-					<br />
-					<a href="tel:+78005553535">8 800 555 35 35</a>
+					{this.state.isLargeScreen ? 
+					<NavLink to="/testing" className="navbar__link">Тестирование</NavLink>
+					: ""}
+
 				</div>
 			</header>
 		);

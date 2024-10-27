@@ -22,7 +22,7 @@ class MainPage extends React.Component {
 					<div className="welcome__img"></div>
 				</div>
 
-				<div className="subtitle">Для чего предназначек это сайт?</div>
+				<div className="subtitle">Для чего предназначен этот сайт?</div>
 
 				<div className="prgh">
 				Сайт Learn-OOP предназначен для: <br /><br />
@@ -38,7 +38,7 @@ class MainPage extends React.Component {
 				<div className="subtitle">Цели сайта LEARN-OOP</div>
 
 				<div className="prgh">
-					Наша основная цель — сделать обучение ООП доступным, интересным и эффективным. Мы стремимся помочь вам:
+					Наша основная цель — сделать обучение ООП доступным, интересным и эффективным. Мы стремимся помочь вам: <br /><br />
 
 					<ol>
 						<li>Понять основы объектно-ориентированного программирования: инкапсуляция, наследование, полиморфизм и абстракция.</li>
