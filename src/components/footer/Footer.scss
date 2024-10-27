@@ -1,0 +1,12 @@
+.footer {
+	width: 100%;
+	height: 50px;
+	background: #ddd;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	&__site-name, &__contacts{
+		font-size: 20px;
+	}
+}

@@ -4,6 +4,7 @@ import "./components.scss"
 import Header from "./components/header/Header";
 import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./components/mainPage/MainPage";
+import Footer from "./components/footer/Footer";
 
 
 class App extends React.Component {
@@ -34,6 +35,8 @@ class App extends React.Component {
               <Route path="/testing" element="Тестирование" />
             </Routes>
         </div>
+
+        <Footer />
       </div>
     )
   }
