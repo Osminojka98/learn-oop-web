@@ -45,8 +45,8 @@ class Header extends React.Component {
 						</div>
 					</div>
 
-					<NavLink to="/point1" className="navbar__link">О сайте</NavLink>
-					<NavLink to="/point2" className="navbar__link">Тестирование</NavLink>
+					<NavLink to="/about" className="navbar__link">О сайте</NavLink>
+					<NavLink to="/testing" className="navbar__link">Тестирование</NavLink>
 				</div>
 
 				<div className="header__course">

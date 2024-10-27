@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.scss"
+import "./components.scss"
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
+import MainPage from "./components/mainPage/MainPage";
 
 
 class App extends React.Component {
@@ -15,12 +17,23 @@ class App extends React.Component {
     return(
       <div>
         <Header />
-{/* 
-        <Routes>
-          <Route path="/point1" element="Heh1" />
-          <Route path="/point2" element="Heh2" />
-          <Route path="/point3" element="Heh3" />
-        </Routes> */}
+        <div className="plug-for-header"></div>
+
+        <div className="container">
+            <Routes>
+              {/* Переход на /main при загрузке приложения */}
+              <Route path="/" element={<Navigate to="/main" replace />} />
+
+              <Route path="/main" element={<MainPage />} />
+              <Route path="/about" element="О нас" />
+
+              <Route path="/oop-basics" element="ООП База" />
+              <Route path="/inheritance" element="Наследование" />
+              <Route path="/encapsulating" element="Инкапсуляция" />
+              <Route path="/polymorphysm" element="Полиморфизм" />
+              <Route path="/testing" element="Тестирование" />
+            </Routes>
+        </div>
       </div>
     )
   }
