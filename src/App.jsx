@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./components/mainPage/MainPage";
 import Footer from "./components/footer/Footer";
 import OopBasics from "./components/pageOopBasics/OopBasics";
+import Inheritance from "./components/inheritance/Inheritance";
 
 
 class App extends Component {
@@ -30,7 +31,7 @@ class App extends Component {
               <Route path="/about" element="О нас" />
 
               <Route path="/oop-basics" element={<OopBasics />} />
-              <Route path="/inheritance" element="Наследование" />
+              <Route path="/inheritance" element={<Inheritance />} />
               <Route path="/encapsulating" element="Инкапсуляция" />
               <Route path="/polymorphysm" element="Полиморфизм" />
               <Route path="/testing" element="Тестирование" />

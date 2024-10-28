@@ -132,11 +132,11 @@ console.log(zell.lastName) // Liew`} language={'js'} />
 					Классы являются абстракцией («синтаксическим сахаром») над функциями-конструкторами. Они облегчают задачу создания экземпляров.
 				</div>
 
-				<Code code={` class Human {
-        constructor(firstName, lastName) {
-            this.firstName = firstName
-            this.lastName = lastName
-        }
+				<Code code={`class Human {
+constructor(firstName, lastName) {
+    this.firstName = firstName
+    this.lastName = lastName
+}
     }`} language={'js'} />
 
 				<div className="prgh">
