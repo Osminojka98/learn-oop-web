@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.scss"
 import "./components.scss"
 import Header from "./components/header/Header";
 import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./components/mainPage/MainPage";
 import Footer from "./components/footer/Footer";
+import OopBasics from "./components/pageOopBasics/OopBasics";
 
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props)
 
@@ -28,7 +29,7 @@ class App extends React.Component {
               <Route path="/main" element={<MainPage />} />
               <Route path="/about" element="О нас" />
 
-              <Route path="/oop-basics" element="ООП База" />
+              <Route path="/oop-basics" element={<OopBasics />} />
               <Route path="/inheritance" element="Наследование" />
               <Route path="/encapsulating" element="Инкапсуляция" />
               <Route path="/polymorphysm" element="Полиморфизм" />
