@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d3679630.css",
+    "main.js": "/static/js/main.0b7d926f.js",
+    "static/media/oop-man.png": "/static/media/oop-man.56ac77bc41f01d899f61.png",
+    "static/media/oop.png": "/static/media/oop.1b174510f8afd4f68b5b.png",
+    "index.html": "/index.html",
+    "main.d3679630.css.map": "/static/css/main.d3679630.css.map",
+    "main.0b7d926f.js.map": "/static/js/main.0b7d926f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3679630.css",
+    "static/js/main.0b7d926f.js"
+  ]
+}
