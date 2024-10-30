@@ -8,6 +8,8 @@ import Footer from "./components/footer/Footer";
 import OopBasics from "./components/pageOopBasics/OopBasics";
 import Inheritance from "./components/inheritance/Inheritance";
 import PageTesting from "./components/pageTesting/PageTesting";
+import Incapsulating from "./components/pageIncapsulating/Incapsulating";
+import Polimorphysm from "./components/pagePolimorphysm/Polimorphysm";
 
 
 class App extends Component {
@@ -33,8 +35,8 @@ class App extends Component {
 
               <Route path="/oop-basics" element={<OopBasics />} />
               <Route path="/inheritance" element={<Inheritance />} />
-              <Route path="/encapsulating" element="Инкапсуляция" />
-              <Route path="/polymorphysm" element="Полиморфизм" />
+              <Route path="/encapsulating" element={<Incapsulating />} />
+              <Route path="/polymorphysm" element={<Polimorphysm />} />
               <Route path="/testing" element={
                 <div>
                   <PageTesting />
