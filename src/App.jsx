@@ -10,6 +10,7 @@ import Inheritance from "./components/inheritance/Inheritance";
 import PageTesting from "./components/pageTesting/PageTesting";
 import Incapsulating from "./components/pageIncapsulating/Incapsulating";
 import Polimorphysm from "./components/pagePolimorphysm/Polimorphysm";
+import About from "./components/pageAbout/About";
 
 
 class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
               <Route path="/" element={<Navigate to="/main" replace />} />
 
               <Route path="/main" element={<MainPage />} />
-              <Route path="/about" element="О нас" />
+              <Route path="/about" element={<About />} />
 
               <Route path="/oop-basics" element={<OopBasics />} />
               <Route path="/inheritance" element={<Inheritance />} />

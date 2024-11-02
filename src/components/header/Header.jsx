@@ -33,6 +33,11 @@ class Header extends Component {
 		this.setState({ isMenuVisible: false });
 	};
 
+
+	handleTouchStart = () => {
+    this.setState({isMenuVisible: !this.state.isMenuVisible});
+  };
+
 	render() {
 		return (
 			<header className="header">
@@ -46,6 +51,7 @@ class Header extends Component {
 						className="themes-menu navbar__themes-menu"
 						onMouseEnter={this.handleMouseEnter}
 						onMouseLeave={this.handleMouseLeave}
+						onTouchStart={this.handleTouchStart}
 					>
 						<div className={`themes-menu__btn ${this.state.isMenuVisible ? 'visible' : ''}`}>
 							<span className="themes-menu__btn-title">Темы</span>

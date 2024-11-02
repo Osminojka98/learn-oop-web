@@ -12,7 +12,121 @@ const questions = [
     options: ["Полиморфизм", "Инкапсуляция", "Наследование"],
     answer: "Инкапсуляция"
   },
-  // Добавьте остальные вопросы
+  {
+    question: "Как называется принцип ООП, позволяющий объекту принимать разные формы?",
+    options: ["Полиморфизм", "Инкапсуляция", "Абстракция"],
+    answer: "Полиморфизм"
+  },
+  {
+    question: "Как называется процесс, при котором класс наследует свойства другого класса?",
+    options: ["Наследование", "Инкапсуляция", "Полиморфизм"],
+    answer: "Наследование"
+  },
+  {
+    question: "Какой метод вызывается при создании экземпляра класса?",
+    options: ["constructor", "initialize", "create"],
+    answer: "constructor"
+  },
+  {
+    question: "Какое ключевое слово используется для наследования класса в JavaScript?",
+    options: ["inherits", "extends", "implements"],
+    answer: "extends"
+  },
+  {
+    question: "Как называется механизм, позволяющий создавать шаблон для объектов?",
+    options: ["Класс", "Объект", "Функция"],
+    answer: "Класс"
+  },
+  {
+    question: "Что позволяет создать защищенные свойства и методы в классе?",
+    options: ["Приватные поля", "Публичные методы", "Конструктор"],
+    answer: "Приватные поля"
+  },
+  {
+    question: "Какой метод применяется для преобразования объекта в строку?",
+    options: ["toString", "toJSON", "convert"],
+    answer: "toString"
+  },
+  {
+    question: "Как называется принцип ООП, заключающийся в создании универсальных методов, работающих с разными объектами?",
+    options: ["Полиморфизм", "Наследование", "Абстракция"],
+    answer: "Полиморфизм"
+  },
+  {
+    question: "Как в JavaScript обозначается приватное поле класса?",
+    options: ["_", "#", "$"],
+    answer: "#"
+  },
+  {
+    question: "Какое ключевое слово используется для создания экземпляра класса?",
+    options: ["new", "create", "instanceof"],
+    answer: "new"
+  },
+  {
+    question: "Какой метод вызывается автоматически при обращении к объекту в строковом контексте?",
+    options: ["toString", "valueOf", "toJSON"],
+    answer: "toString"
+  },
+  {
+    question: "Как называется метод, который возвращает примитивное значение объекта?",
+    options: ["valueOf", "toString", "convert"],
+    answer: "valueOf"
+  },
+  {
+    question: "Как в JavaScript создается наследуемый класс?",
+    options: ["class MyClass extends ParentClass", "class MyClass inherit ParentClass", "class MyClass parent ParentClass"],
+    answer: "class MyClass extends ParentClass"
+  },
+  {
+    question: "Какой метод вызывается при использовании оператора сложения с объектом?",
+    options: ["valueOf", "toString", "sum"],
+    answer: "valueOf"
+  },
+  {
+    question: "Какое ключевое слово используется для обращения к текущему экземпляру класса?",
+    options: ["this", "self", "class"],
+    answer: "this"
+  },
+  {
+    question: "Какой принцип ООП позволяет скрыть детали реализации и предоставлять только интерфейс?",
+    options: ["Абстракция", "Наследование", "Инкапсуляция"],
+    answer: "Абстракция"
+  },
+  {
+    question: "Какой метод JavaScript используется для создания прототипного наследования?",
+    options: ["Object.create", "Object.assign", "Object.clone"],
+    answer: "Object.create"
+  },
+  {
+    question: "Что возвращает метод constructor в JavaScript?",
+    options: ["Ссылку на класс", "Ссылку на объект", "Имя функции"],
+    answer: "Ссылку на класс"
+  },
+  {
+    question: "Какой метод JavaScript применяется для проверки, принадлежит ли объект определенному классу?",
+    options: ["instanceof", "typeof", "isPrototypeOf"],
+    answer: "instanceof"
+  },
+  {
+    question: "Какой метод JavaScript применяется для копирования свойств из одного объекта в другой?",
+    options: ["Object.assign", "Object.copy", "Object.create"],
+    answer: "Object.assign"
+  },
+  {
+    question: "Какой метод позволяет сделать глубокое копирование объекта?",
+    options: ["JSON.parse(JSON.stringify())", "Object.assign", "Object.create"],
+    answer: "JSON.parse(JSON.stringify())"
+  },
+  {
+    question: "Какой тип данных используется для хранения экземпляра класса?",
+    options: ["Object", "Array", "Class"],
+    answer: "Object"
+  },
+  {
+    question: "Что произойдет, если в классе не определить метод constructor?",
+    options: ["Он будет создан автоматически", "Класс не будет работать", "Будет ошибка"],
+    answer: "Он будет создан автоматически"
+  }
 ];
 
 function Quiz() {
