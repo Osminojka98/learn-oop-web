@@ -69,3 +69,10 @@ button:not(:disabled):hover {
   color: #4caf50;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .quiz-container {
+    width: 98%;
+    // margin: 1
+  }
+}
